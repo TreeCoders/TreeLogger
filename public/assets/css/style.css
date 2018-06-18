@@ -1,0 +1,283 @@
+/* ============================================== */
+/* standard page style */
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#homePage {
+  background-image: url("../img/views/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 100%;
+  
+  
+}
+#heroImgRow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+#h1HeroImgText {
+  font-size: 50pt;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px, 2px, 4px, #000000;
+  
+}
+#pHeroImgText{
+  font-size: 25pt;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-shadow: 2px, 2px, 4px, #000000;
+}
+#heroImgText {
+  display: block;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*end of standard page style*/
+/* ============================================== */
+
+/* ============================================== */
+/* Nav Bar */
+nav {
+  padding: 20px 40px 20px 40px;
+}
+.nav a{
+  color: rgb(42, 187, 139) !important;
+  font-size: 1.8em !important;
+}
+#logo {
+  float: left;
+}
+
+#logobar {
+  width: 300
+}
+#logotext {
+    padding: 10px;
+}
+/* #mainNav {
+    width: 300
+} */
+
+/*end of nav bar*/
+/* ============================================== */
+
+/* ============================================== */
+/* map */
+#mapCol, #mapFloatingPanel {
+  width: 70%; 
+  height: 100%; 
+  margin:0px auto; 
+  text-align:center;
+  display:inline-block
+}
+#map {
+  width: 400px;
+  height: 400px;
+  display:inline-block;
+}
+#mapFloatingPanel {
+  position: relative;
+  width: 350px;
+  top: 10px;
+  z-index: 5;
+  padding: 1px;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 5px;
+  display:inline-block;
+}
+#mapbtn {
+  font-size: 12px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2%;
+}
+/* end of map */
+/* ============================================== */
+
+/* ============================================== */
+/* HEADER */
+.header-image {
+  width: 100%;
+  height: 450px;
+}
+/*End of HEADER*/
+/* ============================================== */
+
+/* ============================================== */
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 50px;
+  clear: both;
+  color: rgb(42, 187, 139) !important;
+
+} 
+/*End of FOOTER*/
+/* ============================================== */
+
+/* ============================================== */
+/*dev section*/
+.developer-image {
+  position: relative;
+  width: 100%;
+}
+#devImgLink {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0860AC;
+}
+.developer-image:hover .overlay {
+  opacity: 1;
+}
+#devText {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*end of dev section overlay image */
+/* ============================================== */
+
+/* ============================================== */
+/*User Profile*/
+#userProfilePhotoCard {
+  position: relative;
+  width: 100%;
+  border: none;
+}
+#userPicture {
+  display: block;
+  max-width: 300px;
+  height: auto;
+}
+#userOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 350px;
+  height: auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+  border: none;
+}
+#userPictureDiv:hover #userOverlay {
+  opacity: 1;
+  border: none;
+}
+#userProfilePhotoBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#userProfileRow2 {
+  margin-left: 10%;
+}
+/*End of User Profile*/
+/* ============================================== */
+
+/* ============================================== */
+/*About Page*/
+#signupPage {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+/*End of About Page*/
+/* ============================================== */
+
+/* ============================================== */
+/* Modal */
+.completeChallengeModal {
+  position: fixed;
+}
+/* Modal */
+/* ============================================== */
+
+
+/*SignUpPage*/
+#signupPage {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+#photolabelP {
+  font-size:8pt;
+  color:gray;
+}
+/*End of SignUpPage*/
+/* ============================================== */
+
+/* ============================================== */
+/*login Page*/
+#signinPage {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+/*End of login Page*/
+/* ============================================== */
+
+/* ============================================== */
+/*About Page*/
+#aboutPageh1 {
+  color: #0860AC;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: light;
+  line-height: 1.8;
+}
+#missionRow {
+  margin: 20%, 20%, 20%, 20%;
+  padding: 20%, 20%, 20%, 20%;
+}
+/*End of About Page*/
+/* ============================================== */
+
+/* ============================================== */
+/*Challenge Page*/
+
+#challengesP, #challengesPointsP {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #0860AC;
+}
+/*End of Challenge Page*/
+/* ============================================== */
