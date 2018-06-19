@@ -7,6 +7,8 @@ const db = require("../models/api");
 const Models = require("../models/api/");
 const User = Models.user
 const Post = Models.Post;
+var googleUser = require("../models/googleUser");
+var passport = require('../config/passport')
 
 
 
@@ -19,7 +21,11 @@ module.exports = function(app) {
     });
   });
 
+  app.get('/pay', function(req, res){
 
+
+    
+  })
 
 // **** Queries of Posts *****
 // Homepage
