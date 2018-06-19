@@ -20,17 +20,16 @@ module.exports = function (app, passport) {
 
   app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
-  app.get('/auth/google/callback', (req, res) => {
-    console.log(req)
-    res.send("MAde it, check console log")
-  }
-    // passport.authenticate('google', 
-    // {
-    //   successRedirect: '/',
-    //   failureRedirect: '/'
-    // })
-  );
-
+  app.get('/auth/google/callback',  passport.authenticate('google', {
+      successRedirect: '/',
+      failureRedirect: '/login'
+    })
+    // function(req, res) {
+    //  res.send('HeLl Yeah', req.user) 
+    
+    // } 
+  )
+     
 
   app.get('/logout', function (req, res) {
     req.logout();
@@ -38,10 +37,12 @@ module.exports = function (app, passport) {
   })
 
 
-  app.get('/profile', function (req, res) {
-    
-    res.render('profile', { googleUser: req.User });
+  app.get('/profile', isLoggedIn,  function (req, res) {
+    // res.send(req.user)
+    res.render('profile', { googleUser: req.user.displayName });
   });
+
+
 
 
   function isLoggedIn(req, res, next) {
@@ -50,7 +51,7 @@ module.exports = function (app, passport) {
       return next();
     }
 
-    res.redirect('/login');
+    // res.redirect('/login');
   }
 
 };
