@@ -1,5 +1,4 @@
-const express = require('express');
-const ejs = require('ejs');
+
 const paypal = require('paypal-rest-sdk');
 
 paypal.configure({
@@ -8,11 +7,11 @@ paypal.configure({
   'client_secret': 'EKlIZDI4qcWQsaSBKnecbWhduBZesDxfJbVkNDV7WDu7DTrXWgBJCHdq1N-KNscOt98_ZS70ip7SOeh_'
 });
 
-const app = express();
+module.exports = function (app) {
 
-app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => res.render('payindex'));
+
+
 
 app.post('/pay', (req, res) => {
   const create_payment_json = {
@@ -21,8 +20,8 @@ app.post('/pay', (req, res) => {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "http://localhost:3000/success",
-        "cancel_url": "http://localhost:3000/cancel"
+        "return_url": "http://localhost:8080/success",
+        "cancel_url": "http://localhost:8080/cancel"
     },
     "transactions": [{
         "item_list": {
@@ -38,7 +37,7 @@ app.post('/pay', (req, res) => {
             "currency": "USD",
             "total": "1.00"
         },
-        "description": "Pizza Money!"
+        "description": "Donating For App!"
     }]
 };
 
@@ -88,4 +87,4 @@ app.get('/success', (req, res) => {
 
 app.get('/cancel', (req, res) => res.send('Cancelled'));
 
-app.listen(3000, () => console.log('Server Started'));
+}
