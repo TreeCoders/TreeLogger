@@ -22,22 +22,26 @@ module.exports = function(app) {
 
 // **** Queries of Posts *****
 // Homepage
-  app.get("/", function(req, res) {
+  app.get("/community", function(req, res) {
     db.Post.findAll({
       limit:10
     }).then(function(dbPost) {
-      res.render("index", { post: dbPost });
+      res.render("community", { post: dbPost });
     });
   });
 
   // treelog homepage
   app.get("/", function (req, res) {
     var obj = {};
-    res.render("home", obj);
+    res.render("index", obj);
 });
 app.get("/about", function (req, res) {
     var obj = {};
     res.render("about", obj);
+});
+app.get("/community", function (req, res) {
+  var obj = {};
+  res.render("community", obj);
 });
 app.get("/donate", function (req, res) {
   var obj = {};
