@@ -75,11 +75,8 @@ app.get('/success', (req, res) => {
         throw error;
     } else {
         console.log(JSON.stringify(payment));
-        res.redirect('Success'); 
-        response.writeHead(301,
-            {Location: 'http://google.com/'}
-          );
-          response.end();
+        res.redirect('/thankyou');
+    
     }
    
 });
