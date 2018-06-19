@@ -271,7 +271,27 @@ footer {
 /* ============================================== */
 /*About Page*/
 #aboutPageh1 {
-  color: #0860AC;
+  color:  rgb(42, 187, 139);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 30pt;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: light;
+  line-height: 1.8;
+}
+#missionRow {
+  margin: 20%, 20%, 20%, 20%;
+  padding: 20%, 20%, 20%, 20%;
+}
+/*End of About Page*/
+/* ============================================== */
+
+/* ============================================== */
+/*About Page*/
+#donatePageh1 {
+  color: rgb(42, 187, 139);
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
@@ -286,6 +306,7 @@ p {
 }
 /*End of About Page*/
 /* ============================================== */
+
 
 /* ============================================== */
 /*Challenge Page*/
