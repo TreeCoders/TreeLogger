@@ -5,14 +5,14 @@
             <div class="col-md-12 text-center" id="missionDiv">
                 <h1 id="aboutPageh1">Mission Statement</h1>
                 <p>Here at Tree Logger, we focus on inspiring and promoting sociability and kindness in the world. We all need
-                    a pick-me-up sometimes, amiright? So we partnered with your local bars, breweries, restaurants and coffee shops to give you more incentive
-                    to complete a kind act, to bring yourself out of your comfort zone, and to socialize in a way you may
-                    not have before.
+                    a pick-me-up sometimes, amiright? Our target is creating networking between cannabis lovers and sharing their experiences.
                 </p>
             </div>
         </div>
         <hr />
-        <div class="row text-center" data-aos="fade-up-right">
+
+
+        {{!-- <div class="row text-center" data-aos="fade-up-right">
             <div class="col-md-12 text-center" id="aboutDiv" data-aos="fade-up-left">
                 <h1 id="aboutPageh1">How It Works</h1>
                 <p>Create a profile.
@@ -24,7 +24,67 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--End of ABout Section-->
+
+
+
+    <div class="container about-us-container">
+		<div class="row header" id="aboutUs">
+			<h3>MEET THE TEAM</h3>
+		</div>
+		<div class="separator-container">
+			<div class="separator line-separator">∎</div>
+		</div>
+		<div class="row" id="imgs-block">
+
+            {{!-- Elvin Aboutme --}}
+
+			<div class="col-md-3"><img src="data:image/jpeg;base64,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" class="img-fluid" alt="Responsive image">
+				<div class="big-text">Elvin</div>
+				<p class="small-text">Elvin is curious...about everything. He loves learning new things, relevant or fictional. He is an avid reader, an enthusiastic engineer and have immense love for music, travel, soccer, science, art and basically anything new.</p>
+				<div class="social-buttons">
+					<!-- <a  target="_blank" href="#" class="btn btn-social btn-github btn-simple">
+						<i class="fab fa-github"></i> -->
+					</a>
+					<a target="_blank" href="https://www.linkedin.com/in/sanion93/" class="btn btn-social btn-linkedin btn-simple"><i class="fa fa-linkedin-square"></i></a>                                    
+				</div>
+			</div>
+
+            {{!-- Kim Aboutme --}}
+
+			<div class="col-md-3"><img src="https://s8.postimg.cc/h738trulx/20180619_163503.jpg" class="img-fluid" alt="Responsive image">
+				<div class="big-text">Kim</div>
+				<p class="small-text">Kim spent the last decade in the Bay Area supporting management and investment teams in Private Equity, FinTech, SaaS, Patent Law, Venture Capital &amp;Blockchain Technology. She’s a yogi, a tree hugger, an aspiring master coder, an equestrian and from Generation X.</p>
+
+				<div class="social-buttons">
+					<!-- <a  target="_blank" href="#" class="btn btn-social btn-github btn-simple">
+						<i class="fab fa-github"></i> -->
+						<!-- </a> -->
+						<a target="_blank" href="https://www.linkedin.com/in/rebecca-li-479b184" class="btn btn-social btn-linkedin btn-simple"><i class="fa fa-linkedin-square"></i></a>                                    
+					</div>
+				</div>
+
+
+
+            {{!-- Lorenzo Aboutme --}}
+				<div class="col-md-3"><img src="https://s8.postimg.cc/k16e7ahdh/20180619_162142.jpg" class="img-fluid" alt="Responsive image">
+					<div class="big-text">Lorenzo</div>
+					<p class="small-text">Lorenzo is a musician and educator turned web developer (does any musician "stop" being a musician? no, they don't). Originally from San Diego, Daniel has been living in the Bay Area for nearly 20 years.</p>
+
+					<div class="social-buttons">
+					<!-- <a  target="_blank" href="#" class="btn btn-social btn-github btn-simple">
+						<i class="fab fa-github"></i>
+					</a> -->
+					<a target="_blank" href="https://www.linkedin.com/in/daniel-owens-54a64831/" class="btn btn-social btn-linkedin btn-simple"><i class="fa fa-linkedin-square"></i></a>                                    
+				</div>
+			</div>
+			
+
+
+
+
+		</div>
+
 
     
