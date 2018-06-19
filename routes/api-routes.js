@@ -22,10 +22,7 @@ module.exports = function(app) {
   });
 
   app.get('/pay', function(req, res){
-
-
-    
-  })
+    })
 
 // **** Queries of Posts *****
 // Homepage
@@ -47,14 +44,21 @@ module.exports = function(app) {
     var obj = {};
     res.render("index", obj);
 });
+
 app.get("/about", function (req, res) {
     var obj = {};
     res.render("about", obj);
 });
+
 app.get("/community", function (req, res) {
   var obj = {};
   res.render("community", obj);
 });
+
+app.get("/map", function (req, res) {
+  res.render("map");
+});
+
 app.get("/donate", function (req, res) {
   var obj = {};
   res.render("donate", obj);
