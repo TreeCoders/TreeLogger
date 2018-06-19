@@ -25,12 +25,7 @@ module.exports = function(app) {
 // Homepage
 
   app.get("/community", function(req, res) {
-    res.render("community");
-  })
-
-  app.get("/", function(req, res) {
     
-
     db.Post.findAll({
       limit:10
     }).then(function(dbPost) {
