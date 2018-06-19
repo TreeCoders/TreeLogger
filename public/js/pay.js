@@ -28,14 +28,14 @@ app.post('/pay', (req, res) => {
             "items": [{
                 "name": "Donation",
                 "sku": "001",
-                "price": "1.00",
+                "price": "5.00",
                 "currency": "USD",
                 "quantity": 1
             }]
         },
         "amount": {
             "currency": "USD",
-            "total": "1.00"
+            "total": "5.00"
         },
         "description": "Donating For App!"
     }]
@@ -64,7 +64,7 @@ app.get('/success', (req, res) => {
     "transactions": [{
         "amount": {
             "currency": "USD",
-            "total": "1.00"
+            "total": "5.00"
         }
     }]
   };
