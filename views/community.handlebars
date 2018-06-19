@@ -4,6 +4,7 @@
         <a class="ui button item" id="submit-post-btn">
           Submit Post
         </a>
+ 
 <!-- END Control Segment -->
 
       <div class="ui divider"></div>
@@ -27,6 +28,9 @@
               <div class="extra">
                 Additional Details
               </div>
+              <form  action= '/posts/{{this.title}}',>
+                <input type='submit' value='Delete'>
+              </form>
             </div>
           </div>
 

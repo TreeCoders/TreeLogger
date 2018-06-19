@@ -2,7 +2,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var User = require('../models/googleUser')
-// var User = require('../models/googleUser');
+const db = require("../models/api");
 var configAuth = require('./auth');
 
 module.exports = function(passport) {
@@ -19,7 +19,21 @@ module.exports = function(passport) {
 	// 	});
 	// });
 
+
+
+
 	  	  passport.deserializeUser(function(obj, done) {
+				db.User.create({
+
+					userName: obj.id,
+					firstName: obj.name.givenName,
+					lastName: obj.name.familyName,
+					email: obj.emails[0].value,
+					userImg: obj.photos[0].value,
+
+				}).then (newUser => {
+					done(null, newUser)
+				});
 		done(null, obj);
 	  });
 
