@@ -68,17 +68,17 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: false }).then(function() {
+  console.log("yay connected to db")
+});
+
 require("./routes/SignIn-routes.js")(app, passport);
 // =============================================================================
 // LISTENER
 // The below code effectively "starts" our server
 // =============================================================================
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-db.sequelize.sync({ force: false }).then(function() {
-console.log("yay connected to db")
-});
-
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });

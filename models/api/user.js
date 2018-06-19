@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
-    userLocation: DataTypes.STRING,
+    userImg: DataTypes.STRING,
   }, { timestamps: true});
 
   User.associate = function(models) {
