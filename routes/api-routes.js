@@ -9,6 +9,7 @@ const User = Models.user
 const Post = Models.Post;
 
 
+
 module.exports = function(app) {
 
   // Get all posts
@@ -22,12 +23,22 @@ module.exports = function(app) {
 
 // **** Queries of Posts *****
 // Homepage
+
   app.get("/community", function(req, res) {
+    res.render("community");
+  })
+
+  app.get("/", function(req, res) {
+    
+
     db.Post.findAll({
       limit:10
     }).then(function(dbPost) {
       res.render("community", { post: dbPost });
     });
+
+  
+
   });
 
   // treelog homepage
