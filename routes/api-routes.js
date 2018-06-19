@@ -39,6 +39,11 @@ app.get("/about", function (req, res) {
     var obj = {};
     res.render("about", obj);
 });
+app.get("/donate", function (req, res) {
+  var obj = {};
+  res.render("donate", obj);
+});
+
 app.get("/home", function (req, res) {
     var obj = {};
     res.render("home", obj);

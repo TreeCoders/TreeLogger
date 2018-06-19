@@ -52,7 +52,6 @@ app.use(express.static("public"));
 
 require("./routes/api-Routes")(app);
 require("./routes/html-Routes")(app);
-require("./routes/viewsRoutes")(app);
 require('./config/passport')(passport);
 
 

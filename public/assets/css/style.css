@@ -19,7 +19,7 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
-  position: absolute;
+  position: absolute; 
   align-items: center;
   justify-content: center;
 }
