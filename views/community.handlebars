@@ -1,0 +1,81 @@
+
+{{!-- ASIDE submit button --}}
+<div class="ui fluid vertical menu">
+        <a class="ui button item" id="submit-post-btn">
+          Submit Post
+        </a>
+<!-- END Control Segment -->
+
+      <div class="ui divider"></div>
+<!-- RESULT should be displayed here -->
+<div class="ui segment">
+        <!--  **** TEST  ***** -->
+        {{#each post}}
+        <div class="ui unstackable items">
+          <div class="item">
+            <div class="image">
+              <img id="icon" src="./assets/img/views/tree.png" width="50" height="50">
+            </div>
+            <div class="content">
+              <a class="header">{{this.title}}</a>
+              <div class="meta">
+                <span>by: {{this.author}}</span>
+              </div>
+              <div class="description">
+                <p> {{this.message}} </p>
+              </div>
+              <div class="extra">
+                Additional Details
+              </div>
+            </div>
+          </div>
+
+          {{/each}}
+
+        <!-- ***** END TEST -->
+      </div>
+
+      <!--  MODALS  -->
+    <!--  MODAL 1 - Submit Post -->
+    <div class="ui modal longer">
+      <i class="close icon"></i>
+      <div class="header">
+        Create Post
+      </div>
+
+      <div class="ui top attached tabular menu">
+        <a class="active item">
+          Link
+        </a>
+        <a class="item">
+          Text
+        </a>
+        <div class="right menu">
+          <div class="item">
+            <div class="ui transparent icon input">
+              <input type="text" placeholder="Add tags...">
+              <i class="info link icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui bottom attached segment active">
+        <form class="ui form" id="create-post">
+          <div class="field">
+            <label>Title:</label>
+            <input type="text" id="title-input">
+          </div>
+          <div class="field">
+            <label>Text:</label>
+            <textarea id="message-input"></textarea>
+          </div>
+          <div class="field">
+            <label>URL</label>
+            <input type="text" id="url-input">
+          </div>
+
+            <!-- <div class="ui button">Cancel</div> -->
+          <button class="ui basic button" type= "submit">Submit</button>
+        </form>
+      </div>
