@@ -301,6 +301,9 @@ p {
   line-height: 1.8;
   
 }
+#abouth2 {
+  color: rgb(34, 163, 120);
+}
 #missionRow {
   margin: 20%, 20%, 20%, 20%;
   padding: 20%, 20%, 20%, 20%;
