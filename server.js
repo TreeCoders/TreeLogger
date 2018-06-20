@@ -51,8 +51,8 @@ app.use(express.static("public"));
 // ================================================================================
 
 require("./public/js/pay")(app);
-require("./routes/api-Routes")(app);
-require("./routes/html-Routes")(app);
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
 require('./config/passport')(passport);
 
 

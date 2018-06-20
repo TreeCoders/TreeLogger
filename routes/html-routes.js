@@ -6,7 +6,7 @@
 // =============================================================
 const path = require("path");
 const db = require("../models/api");
-const Op = require("Sequelize").Op;
+const Op = require("sequelize").Op;
 
 
 // Routes

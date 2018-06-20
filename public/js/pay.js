@@ -20,8 +20,10 @@ app.post('/pay', (req, res) => {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "https://mighty-taiga-95027.herokuapp.com/",
-        "cancel_url": "https://mighty-taiga-95027.herokuapp.com/"
+
+        "return_url": "https://mighty-taiga-95027.herokuapp.com/success",
+        "cancel_url": "https://mighty-taiga-95027.herokuapp.com/cancel"
+
     },
     "transactions": [{
         "item_list": {

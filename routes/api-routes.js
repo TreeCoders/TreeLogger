@@ -95,7 +95,7 @@ module.exports = function (app) {
     console.log(req.body);
     db.Post.create({
       // AUTHOR THIS IS FOR TESTING ONLY
-      author: req.body.author,
+      author: "LoggedInAuthor",
       title: req.body.title,
       message: req.body.message,
       createdAt: new Date(),

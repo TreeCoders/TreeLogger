@@ -8,6 +8,6 @@ module.exports = {
 	'googleAuth' : {
 		'clientID': '628788118499-k84jsaiat0cj23adr53906mbfqs546er.apps.googleusercontent.com',
 		'clientSecret': 'tvTAZmCVsok74cR6u4qmBodr',
-		'callbackURL': 'http://localhost:8080/auth/google/callback'
+		'callbackURL': 'https://mighty-taiga-95027.herokuapp.com/auth/google/callback'
 	}
 }
