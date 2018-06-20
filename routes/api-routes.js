@@ -70,6 +70,11 @@ module.exports = function (app) {
     res.render("donate", obj);
   });
 
+  app.get("/thankyou", function (req, res) {
+    var obj = {};
+    res.render("thankyou", obj);
+  });
+
   app.get("/home", function (req, res) {
     var obj = {};
     res.render("home", obj);

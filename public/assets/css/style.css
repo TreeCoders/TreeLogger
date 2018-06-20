@@ -299,10 +299,14 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-weight: light;
   line-height: 1.8;
+  
 }
 #missionRow {
   margin: 20%, 20%, 20%, 20%;
   padding: 20%, 20%, 20%, 20%;
+}
+#mission {
+  font-size: 15pt;
 }
 /*End of About Page*/
 /* ============================================== */
