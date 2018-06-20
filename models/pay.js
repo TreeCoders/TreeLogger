@@ -20,8 +20,8 @@ app.post('/pay', (req, res) => {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "http://localhost:8080/success",
-        "cancel_url": "http://localhost:8080/cancel"
+        "return_url": "https://mighty-taiga-95027.herokuapp.com/success",
+        "cancel_url": "https://mighty-taiga-95027.herokuapp.com/cancel"
     },
     "transactions": [{
         "item_list": {
