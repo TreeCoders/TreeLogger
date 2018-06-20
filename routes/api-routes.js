@@ -64,7 +64,7 @@ module.exports = function (app) {
     res.render("community", obj);
   });
 
-  
+
   app.get("/donate", function (req, res) {
     var obj = {};
     res.render("donate", obj);
@@ -73,6 +73,12 @@ module.exports = function (app) {
   app.get("/home", function (req, res) {
     var obj = {};
     res.render("home", obj);
+  });
+
+
+  app.get("/map", function (req, res) {
+    var obj = {};
+    res.render("map", obj);
   });
 
 
