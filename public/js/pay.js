@@ -21,7 +21,7 @@ app.post('/pay', (req, res) => {
     },
     "redirect_urls": {
         "return_url": "http://localhost:8080/success",
-        "cancel_url": "http://localhost:8080/cancel"
+        "cancel_url": "https://mighty-taiga-95027.herokuapp.com/"
     },
     "transactions": [{
         "item_list": {
