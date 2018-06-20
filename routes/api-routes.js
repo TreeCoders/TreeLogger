@@ -22,10 +22,15 @@ module.exports = function (app) {
   });
 
 
-
-  app.get('/pay', function(req, res){
-    })
-
+    // app.delete('/posts/:id', (req, res) => {
+    //  const idr = req.params.id
+    //   db.Post.destroy({
+    //     where: { id: idr }
+    //   })
+    //     .then(deletedOwner => {
+    //       res.json(deletedOwner);
+    //     });
+    // });
 
 
 
@@ -45,33 +50,27 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     var obj = {};
     res.render("index", obj);
+  });
 
-app.get("/about", function (req, res) {
+
+  app.get("/about", function (req, res) {
     var obj = {};
     res.render("about", obj);
-});
+  });
 
-app.get("/community", function (req, res) {
-  var obj = {};
-  res.render("community", obj);
-});
 
-app.get("/map", function (req, res) {
-  res.render("map");
-});
+  app.get("/community", function (req, res) {
+    var obj = {};
+    res.render("community", obj);
+  });
 
-app.get("/donate", function (req, res) {
-  var obj = {};
-  res.render("donate", obj);
-});
+  
+  app.get("/donate", function (req, res) {
+    var obj = {};
+    res.render("donate", obj);
+  });
 
-app.get("/thankyou", function (req, res) {
-  var obj = {};
-  res.render("thankyou", obj);
-});
-
-app.get("/home", function (req, res) {
-
+  app.get("/home", function (req, res) {
     var obj = {};
     res.render("home", obj);
   });
